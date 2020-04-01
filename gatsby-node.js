@@ -22,7 +22,8 @@ exports.createSchemaCustomization = ({ actions }) => {
     }
     type Speaker {
       name: String!
-      bio: String!
+      title: String
+      bio: String
       picUrl: String
       url: String
       linkedin: String

@@ -5,24 +5,30 @@ import SocialLinks from './post-social-links';
 
 const PostSpeaker = ({ speaker }) => (
   <div className="post-speaker">
-    <h3 className="post-speaker-name">{speaker.name}</h3>
-    {speaker.picUrl
+    <div className="post-speaker-card">
+      <h3 className="post-speaker-name">{speaker.name}</h3>
+      <p>{speaker.title}</p>
+      {speaker.picUrl
+        && (
+          <SpeakerPic
+            src={speaker.picUrl}
+            alt={speaker.name}
+          />
+        )}
+      {speaker.url
+        && (
+          <div className="post-speaker-url">
+            <ExternalLink href={speaker.url}>
+              {speaker.name}'s homepage
+            </ExternalLink>
+          </div>
+        )}
+      <SocialLinks social={speaker} />
+    </div>
+    {speaker.bio
       && (
-        <SpeakerPic
-          src={speaker.picUrl}
-          alt={speaker.name}
-        />
+        <div className="post-speaker-bio" dangerouslySetInnerHTML={{ __html: speaker.bio }} />
       )}
-    {speaker.url
-      && (
-        <div className="post-speaker-url">
-          <ExternalLink href={speaker.url}>
-            {speaker.name}'s homepage
-          </ExternalLink>
-        </div>
-      )}
-    <SocialLinks social={speaker} />
-    <div className="post-speaker-bio" dangerouslySetInnerHTML={{ __html: speaker.bio }} />
   </div>
 );
 

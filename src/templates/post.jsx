@@ -47,6 +47,7 @@ export const pageQuery = graphql`
         title
         speaker {
           name
+          title
           bio
           picUrl
           url
