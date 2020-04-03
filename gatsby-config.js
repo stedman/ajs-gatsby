@@ -2,19 +2,19 @@ module.exports = {
   siteMetadata: {
     title: 'Austin JavaScript',
     description: 'WIP: AustinJS homepage built with (-surprise-) JavaScript.',
-    author: 'Austin JavaScript',
+    author: '@austinjs',
   },
   plugins: [
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'gatsby-starter-default',
-        short_name: 'starter',
+        name: 'Austin JavaScript',
+        short_name: 'AustinJS',
         start_url: '/',
         background_color: '#663399',
         theme_color: '#663399',
         display: 'minimal-ui',
-        icon: 'src/images/gatsby-icon.png', // This path is relative to the root of the site.
+        icon: 'src/images/austinjavascript-icon.png', // This path is relative to the root of the site.
       },
     },
     'gatsby-plugin-react-helmet',
