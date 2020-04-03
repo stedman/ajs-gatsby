@@ -1,14 +1,14 @@
 ---
 title: Pandemic Programming
 speaker:
-  name: Nate Austin
-  title: Software Engineer at Stedman Technologies
+  name: Pat Anser
+  title: Software Engineer at Austin JavaScript
   picUrl:
   bio:
-  url: http://nateaustin.com
-  twitter: nateaustin
-  github: nateaustin
-  linkedin: nateaustin
+  url: http://patanser.com
+  twitter: patanser
+  github: patanser
+  linkedin: patanser
 sponsor:
   name: Cloudflare
   url: https://www.cloudflare.com/

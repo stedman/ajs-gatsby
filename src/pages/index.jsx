@@ -3,20 +3,63 @@ import { Link } from 'gatsby';
 
 import Layout from '../components/layout';
 import SEO from '../components/seo';
-// import Image from '../components/image';
+import PostLink from '../components/post-link';
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <div className="content">
-      <h1>Hi people</h1>
-      <p>Welcome to Austin JavaScript.</p>
-      {/* <div style={{ maxWidth: '300px', marginBottom: '1.45rem' }}>
-      <Image />
-    </div> */}
-      <p><Link to="/post/">Go to Archive</Link></p>
-    </div>
-  </Layout>
-);
+const IndexPage = ({
+  data: {
+    allMarkdownRemark: { edges },
+  },
+}) => {
+  const Posts = edges
+    // Make sure there's a date field and that file isn't 'draft'.
+    .filter((edge) => !!edge.node.fields.date && edge.node.fields.postTypes[1] !== 'draft')
+    .map((edge) => <PostLink key={edge.node.id} post={edge.node} />);
+
+  return (
+    <Layout>
+      <SEO title="Home" />
+      <div className="columns is-variable is-8-desktop">
+        <div className="column is-two-thirds">
+          <div className="content is-medium">
+            <h1>Austin JavaScript</h1>
+            <p>We are a community-driven group that meets to discuss JavaScript and the open web.</p>
+            <p>We work hard to build a community that treats people with excellence. We've formalized this in the <Link to="/code-of-conduct/">Austin JavaScript Code of Conduct</Link>.</p>
+          </div>
+        </div>
+        <div className="column">
+          <div className="content has-offset-top-3">
+            <h3>Recent activity</h3>
+            <ul>
+              {Posts}
+            </ul>
+            <p><Link to="/post/">More...</Link></p>
+          </div>
+        </div>
+      </div>
+    </Layout>
+  );
+};
 
 export default IndexPage;
+
+export const pageQuery = graphql`
+  query {
+    allMarkdownRemark(sort: { order: DESC, fields: [fields___slug] }, limit: 5) {
+      edges {
+        node {
+          id
+          excerpt(pruneLength: 250)
+          fields {
+            date(formatString: "MMM DD, YYYY")
+            dateShort:date
+            postTypes
+            slug
+          }
+          frontmatter {
+            title
+          }
+        }
+      }
+    }
+  }
+`;
