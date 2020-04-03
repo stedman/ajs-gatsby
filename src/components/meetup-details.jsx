@@ -24,4 +24,5 @@ const MeetupDetails = ({ frontmatter, fields }) => (
     </div>
   </div>
 );
+
 export default MeetupDetails;

@@ -8,6 +8,9 @@ const Header = ({ siteTitle }) => (
       <div className="container">
         <div className="navbar" role="navigation" aria-label="main navigation">
           <div className="navbar-brand">
+            <figure className="image is-96x96">
+              <img src="/icons/icon-96x96.png" alt="" />
+            </figure>
             <Link to="/" className="navbar-item title has-text-white is-size-1">
               {siteTitle}
             </Link>
