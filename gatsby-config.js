@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: 'Austin JavaScript',
     description: 'WIP: AustinJS homepage built with (-surprise-) JavaScript.',
-    author: 'Steve Stedman',
+    author: 'Austin JavaScript',
   },
   plugins: [
     {
@@ -28,16 +28,16 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'posts',
-        path: `${__dirname}/src/posts`,
-      },
-    },
-    {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
+          {
+            resolve: 'gatsby-source-filesystem',
+            options: {
+              name: 'posts',
+              path: `${__dirname}/src/posts`,
+            },
+          },
           {
             resolve: 'gatsby-remark-external-links',
             options: {
