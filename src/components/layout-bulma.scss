@@ -1,0 +1,43 @@
+@charset "utf-8";
+
+// tetradic harmony via https://color.joelb.dev/hex/ED1878
+$tetradic0: hsl(333, 85%, 50%);
+$tetradic1: hsl(213, 85%, 50%);
+$tetradic2: hsl(153, 85%, 40%); // lightness reduced by 10%
+$tetradic3: hsl(33, 85%, 50%);
+
+$primary: $tetradic0;
+$info: $tetradic1;
+
+@import "~bulma/bulma.sass";
+
+.has-text-tetradic1 {
+  color: $tetradic1 !important;
+}
+.has-text-tetradic2 {
+  color: $tetradic2 !important;
+}
+.has-text-tetradic3 {
+  color: $tetradic3 !important;
+}
+
+.has-offset-top {
+  margin-top: 1em;
+  padding-top: 1em;
+}
+.has-offset-top-2 {
+  margin-top: 2em;
+  padding-top: 1em;
+}
+.has-offset-top-3 {
+  margin-top: 3em;
+  padding-top: 1em;
+}
+
+.has-border-top {
+  border-top: 1px solid $grey-lighter;
+}
+
+.is-padded {
+  padding: 1.5em 0 0 1.5em;
+}

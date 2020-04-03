@@ -2,31 +2,51 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../components/layout';
 import PostSpeaker from '../components/post-speaker';
+import PostDetails from '../components/post-details';
 import PostSponsor from '../components/post-sponsor';
+import SEO from '../components/seo';
 
-export default function Template({
-  data,
-}) {
+export default function Template({ data }) {
   const { markdownRemark } = data;
-  const {
-    fields, frontmatter, html,
-  } = markdownRemark;
+  const { fields, frontmatter, html } = markdownRemark;
+
+  if (fields.postTypes[0] === 'meetup') {
+    return (
+      <Layout>
+        <SEO title={`Meetup: ${frontmatter.title} (${fields.dateShort})`} />
+        <div className="columns is-variable is-8-desktop">
+          <div className="column is-two-thirds">
+            <h1 className="title">{frontmatter.title}</h1>
+            <div
+              className="content is-medium"
+              dangerouslySetInnerHTML={{ __html: html }}
+            />
+            <PostDetails frontmatter={frontmatter} fields={fields} />
+          </div>
+          <div className="column">
+            <PostSpeaker
+              speaker={frontmatter.speaker}
+            />
+          </div>
+        </div>
+        <div className="section">
+          <PostSponsor
+            sponsor={frontmatter.sponsor}
+          />
+        </div>
+      </Layout>
+    );
+  }
 
   return (
     <Layout>
-      <div className="post-container">
-        <div className="post">
-          <h1>{frontmatter.title}</h1>
-          <h2>{fields.date}</h2>
-          <PostSpeaker
-            speaker={frontmatter.speaker}
-          />
+      <SEO title={frontmatter.title} />
+      <div className="columns">
+        <div className="column is-two-thirds">
+          <h1 className="title">{frontmatter.title}</h1>
           <div
-            className="post-content"
+            className="content is-large"
             dangerouslySetInnerHTML={{ __html: html }}
-          />
-          <PostSponsor
-            sponsor={frontmatter.sponsor}
           />
         </div>
       </div>
@@ -41,6 +61,8 @@ export const pageQuery = graphql`
       html
       fields {
         date(formatString: "MMMM DD, YYYY")
+        dateShort:date
+        postTypes
         slug
       }
       frontmatter {
@@ -53,7 +75,6 @@ export const pageQuery = graphql`
           url
           linkedin
           twitter
-          facebook
           github
         }
         sponsor {
@@ -65,15 +86,13 @@ export const pageQuery = graphql`
           name
           url
           location
-          directions
-          note
+          notes
         }
         after {
           name
           url
           location
-          directions
-          note
+          notes
         }
       }
     }

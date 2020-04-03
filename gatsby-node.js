@@ -28,7 +28,6 @@ exports.createSchemaCustomization = ({ actions }) => {
       url: String
       linkedin: String
       twitter: String
-      facebook: String
       github: String
     }
     type Sponsor {
@@ -40,15 +39,13 @@ exports.createSchemaCustomization = ({ actions }) => {
       name: String!
       url: String
       location: String
-      directions: String
-      note: String
+      notes: String
     }
     type After {
       name: String
       url: String
       location: String
-      directions: String
-      note: String
+      notes: String
     }
   `;
   createTypes(typeDefs);
@@ -70,18 +67,21 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 
     const filename = createFilePath({ node, getNode, basePath: 'posts' });
 
-    // Get the date and title from the file name.
-    const reParseFileName = /^\/(\d{4}-\d{2}-\d{2})-(\w+)\/$/;
+    // Extract the date and postType from the file name.
+    const reParseFileName = /^\/(\d{4}-\d{2}-\d{2})-(.+)\/$/;
     const matched = filename.match(reParseFileName);
     if (!matched) throw Error('Invalid file name pattern.');
-    const [, date, title] = matched;
+    const [, date, postType] = matched;
 
-    // Create a new slug by concatenating everything.
-    const slug = `/${categories.concat([title, date]).join('-').replace(/-/g, '/')}/`;
+    // Save the date for later use.
+    createNodeField({ node, name: 'date', value: date });
+
+    // Create a file path slug from categories + postType + date.
+    const slug = `/${categories.concat([postType, date]).join('-').replace(/-/g, '/')}/`;
     createNodeField({ node, name: 'slug', value: slug });
 
-    // Also save the date for later use.
-    createNodeField({ node, name: 'date', value: date });
+    // Save postType for the heck of it.
+    createNodeField({ node, name: 'postTypes', value: postType.split('-') });
   }
 };
 

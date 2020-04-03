@@ -2,6 +2,7 @@
 import React from 'react';
 import PostLink from '../components/post-link';
 import Layout from '../components/layout';
+import SEO from '../components/seo';
 
 const IndexPage = ({
   data: {
@@ -9,15 +10,18 @@ const IndexPage = ({
   },
 }) => {
   const Posts = edges
-    // You can filter your posts based on some criteria
-    .filter((edge) => !!edge.node.fields.date)
+    // Make sure there's a date field and that file isn't 'draft'.
+    .filter((edge) => !!edge.node.fields.date && edge.node.fields.postTypes[1] !== 'draft')
     .map((edge) => <PostLink key={edge.node.id} post={edge.node} />);
 
   return (
     <Layout>
-      <div className="blog-archive">
+      <SEO title="Archive" />
+      <div className="content">
         <h1>Archive</h1>
-        <ol>{Posts}</ol>
+        <ul>
+          {Posts}
+        </ul>
       </div>
     </Layout>
   );
@@ -33,6 +37,8 @@ export const pageQuery = graphql`
           excerpt(pruneLength: 250)
           fields {
             date(formatString: "MMM DD, YYYY")
+            dateShort:date
+            postTypes
             slug
           }
           frontmatter {
