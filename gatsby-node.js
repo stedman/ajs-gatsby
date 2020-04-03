@@ -31,21 +31,14 @@ exports.createSchemaCustomization = ({ actions }) => {
       github: String
     }
     type Sponsor {
-      name: String!
-      url: String
-      careerUrl: String
+      id: String
+      hiring: Boolean
     }
     type Venue {
-      name: String!
-      url: String
-      location: String
-      notes: String
+      id: String
     }
     type After {
-      name: String
-      url: String
-      location: String
-      notes: String
+      id: String
     }
   `;
   createTypes(typeDefs);

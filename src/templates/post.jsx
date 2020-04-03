@@ -86,21 +86,14 @@ export const pageQuery = graphql`
           github
         }
         sponsor {
-          name
-          url
-          careerUrl
+          id
+          hiring
         }
         venue {
-          name
-          url
-          location
-          notes
+          id
         }
         after {
-          name
-          url
-          location
-          notes
+          id
         }
       }
     }

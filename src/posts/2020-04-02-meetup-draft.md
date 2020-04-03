@@ -10,19 +10,12 @@ speaker:
   github: patanser
   linkedin: patanser
 sponsor:
-  name: Cloudflare
-  url: https://www.cloudflare.com/
-  careerUrl: https://www.cloudflare.com/careers/
+  id: cloudflare
+  hiring: true
 venue:
-  name: Cloudflare
-  url: https://www.cloudflare.com/
-  location: 106 E 6th St, Austin, TX 78701, 4th Floor
-  notes:
+  id: cloudflare
 after:
-  name: Lavaca Street Bar
-  url: https://lavacastreet.com/
-  location: 405 Lavaca Street, Austin, TX 78701
-  notes:
+  id: lavaca
 ---
 
 Duis sunt anim eiusmod eu nulla ut non. Minim labore irure do id est minim consectetur non cillum minim ea aute qui aliquip. Commodo deserunt Lorem ullamco sunt in. Quis voluptate dolore voluptate deserunt voluptate ipsum aliquip occaecat deserunt non do reprehenderit sunt. Amet cupidatat aliqua excepteur do sunt do cillum elit eiusmod tempor irure dolore laboris.
