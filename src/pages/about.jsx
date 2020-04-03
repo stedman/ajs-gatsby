@@ -32,7 +32,7 @@ const About = () => (
 
           <h2>How does it usually work?</h2>
 
-          <p>We typically meet on the 3<sup>rd</sup> Tuesday of each month downtown. We’ll have a speaker or two, open things up for questions and discussion, and then head over to <a href="http://thegingerman.com/austin/">The Gingerman</a> to continue the festivities.</p>
+          <p>We typically meet on the 3<sup>rd</sup> Tuesday of each month downtown. We’ll have a speaker or two, open things up for questions and discussion, and then head to a nearby watering hole to continue the festivities.</p>
 
           <h2>Anything else I should know?</h2>
 
