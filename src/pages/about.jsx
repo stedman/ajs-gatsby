@@ -1,10 +1,12 @@
 import React from 'react';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
+import FontAwesomeScript from '../components/fontawesome-script';
 import People from '../components/people';
 
 const About = () => (
   <Layout>
+    <FontAwesomeScript />
     <SEO title="About" />
     <div className="columns is-variable is-8-desktop">
       <div className="column is-two-thirds">
