@@ -1,5 +1,5 @@
 import React from 'react';
-import PostSpeaker from './post-speaker';
+import BizCard from './biz-card';
 
 const peeps = {
   organizers: [
@@ -40,24 +40,24 @@ const peeps = {
 
 const GroupTitle = ({ groupName, idx }) => {
   if (idx === 0) {
-    return (<h3 className="title is-size-4 is-capitalized has-offset-top">{groupName}</h3>);
+    return (<h3 className="title is-size-5 is-capitalized has-offset-top">{groupName}</h3>);
   }
   return null;
 };
 
 const People = () => (
   <>
-    <h2 className="title">People</h2>
-    <p>Austin JavaScript is made possible by the hard work and goodwill of many people, but there are a few in particular that you should feel free to reach out to if you’ve got any questions:</p>
+    <div className="content">
+      <h2>People</h2>
+      <p>Austin JavaScript is made possible by the hard work and goodwill of many people, but there are a few in particular that you should feel free to reach out to if you’ve got any questions:</p>
+    </div>
 
     {Object.entries(peeps).map(([org, group]) => group.map((person, idx) => (
       <>
         <GroupTitle groupName={org} idx={idx} />
-        <div key={person.twitter} className="has-offset-top">
-          <PostSpeaker
-            speaker={person}
-          />
-        </div>
+        <BizCard
+          person={person}
+        />
       </>
     )))}
   </>

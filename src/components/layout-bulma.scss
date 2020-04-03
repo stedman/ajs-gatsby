@@ -21,23 +21,21 @@ $info: $tetradic1;
   color: $tetradic3 !important;
 }
 
-.has-offset-top {
-  margin-top: 1em;
-  padding-top: 1em;
-}
-.has-offset-top-2 {
-  margin-top: 2em;
-  padding-top: 1em;
-}
-.has-offset-top-3 {
-  margin-top: 3em;
-  padding-top: 1em;
-}
-
-.has-border-top {
-  border-top: 1px solid $grey-lighter;
+@media screen and (min-width: $tablet) {
+  .has-offset-top {
+    margin-top: 1em;
+    padding-top: 1em;
+  }
+  .has-offset-top-2 {
+    margin-top: 2em;
+    padding-top: 1em;
+  }
+  .has-offset-top-3 {
+    margin-top: 3em;
+    padding-top: 1em;
+  }
 }
 
-.is-padded {
-  padding: 1.5em 0 0 1.5em;
+.is-marginless-bottom {
+  margin-bottom: 0 !important;
 }

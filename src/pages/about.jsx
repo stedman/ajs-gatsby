@@ -39,8 +39,9 @@ const About = () => (
       </div>
 
       <div className="column">
-        <div className="has-offset-top" />
-        <People />
+        <div className="has-offset-top-3">
+          <People />
+        </div>
       </div>
     </div>
 

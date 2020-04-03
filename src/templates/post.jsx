@@ -1,8 +1,8 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../components/layout';
-import PostSpeaker from '../components/post-speaker';
-import PostDetails from '../components/post-details';
+import BizCard from '../components/biz-card';
+import MeetupDetails from '../components/meetup-details';
 import PostSponsor from '../components/post-sponsor';
 import SEO from '../components/seo';
 
@@ -13,19 +13,24 @@ export default function Template({ data }) {
   if (fields.postTypes[0] === 'meetup') {
     return (
       <Layout>
-        <SEO title={`Meetup: ${frontmatter.title} (${fields.dateShort})`} />
-        <div className="columns is-variable is-8-desktop">
+        <SEO
+          title={`Meetup: ${frontmatter.title} (${fields.dateShort})`}
+        />
+        <div className="columns is-desktop is-variable is-8-desktop">
           <div className="column is-two-thirds">
             <h1 className="title">{frontmatter.title}</h1>
             <div
               className="content is-medium"
               dangerouslySetInnerHTML={{ __html: html }}
             />
-            <PostDetails frontmatter={frontmatter} fields={fields} />
+            <MeetupDetails
+              frontmatter={frontmatter}
+              fields={fields}
+            />
           </div>
-          <div className="column">
-            <PostSpeaker
-              speaker={frontmatter.speaker}
+          <div className="column has-offset-top-3">
+            <BizCard
+              person={frontmatter.speaker}
             />
           </div>
         </div>

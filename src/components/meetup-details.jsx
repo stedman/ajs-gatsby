@@ -1,6 +1,6 @@
 import React from 'react';
 
-const PostDetails = ({ frontmatter, fields }) => (
+const MeetupDetails = ({ frontmatter, fields }) => (
   <div className="message">
     <div className="message-header">
       Meetup
@@ -24,4 +24,4 @@ const PostDetails = ({ frontmatter, fields }) => (
     </div>
   </div>
 );
-export default PostDetails;
+export default MeetupDetails;
