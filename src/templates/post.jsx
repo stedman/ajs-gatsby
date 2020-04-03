@@ -14,6 +14,7 @@ export default function Template({ data }) {
   if (fields.postTypes[0] === 'meetup') {
     return (
       <Layout>
+        <FontAwesomeScript />
         <SEO
           title={`Meetup: ${frontmatter.title} (${fields.dateShort})`}
         />
