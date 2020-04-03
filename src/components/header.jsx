@@ -4,11 +4,11 @@ import PropTypes from 'prop-types';
 
 const Header = ({ siteTitle }) => (
   <header className="hero is-primary">
-    <div className="hero-body">
+    <div className="hero-body is-paddingless">
       <div className="container">
         <div className="navbar" role="navigation" aria-label="main navigation">
           <div className="navbar-brand">
-            <Link to="/" className="navbar-item has-text-white is-size-1">
+            <Link to="/" className="navbar-item title has-text-white is-size-1">
               {siteTitle}
             </Link>
           </div>
