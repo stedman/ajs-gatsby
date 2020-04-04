@@ -4,6 +4,7 @@ module.exports = {
     description: 'WIP: AustinJS homepage built with (-surprise-) JavaScript.',
     author: '@austinjs',
   },
+  pathPrefix: '/ajs',
   plugins: [
     {
       resolve: 'gatsby-plugin-manifest',
