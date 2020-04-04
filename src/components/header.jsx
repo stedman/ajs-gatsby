@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
+import LogoImage from './logo-image';
 
 const Header = ({ siteTitle }) => (
   <header className="hero is-primary">
@@ -9,9 +10,9 @@ const Header = ({ siteTitle }) => (
         <div className="navbar" role="navigation" aria-label="main navigation">
           <div className="navbar-brand">
             <figure className="image is-96x96">
-              <img src="/icons/icon-96x96.png" alt="" />
+              <LogoImage />
             </figure>
-            <Link to="/" className="navbar-item title has-text-white is-size-1">
+            <Link to="/" className="navbar-item title has-text-white is-size-1-tablet">
               {siteTitle}
             </Link>
           </div>
