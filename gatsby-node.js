@@ -31,14 +31,14 @@ exports.createSchemaCustomization = ({ actions }) => {
       github: String
     }
     type Sponsor {
-      id: String
+      key: String
       hiring: Boolean
     }
     type Venue {
-      id: String
+      key: String
     }
     type After {
-      id: String
+      key: String
     }
   `;
   createTypes(typeDefs);
@@ -91,7 +91,6 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       ) {
         edges {
           node {
-            fileAbsolutePath
             fields {
               slug
             }

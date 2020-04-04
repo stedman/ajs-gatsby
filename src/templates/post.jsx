@@ -1,5 +1,5 @@
 import React from 'react';
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import FontAwesomeScript from '../components/fontawesome-script';
@@ -8,10 +8,33 @@ import MeetupDetails from '../components/meetup-details';
 import PostSponsor from '../components/post-sponsor';
 
 export default function Template({ data }) {
-  const { markdownRemark } = data;
+  const { markdownRemark, allMarkdownRemark } = data;
   const { fields, frontmatter, html } = markdownRemark;
+  const { edges } = allMarkdownRemark;
 
   if (fields.postTypes[0] === 'meetup') {
+    const pagination = edges
+      .filter((edge) => edge.node.fields.slug === fields.slug)
+      .reduce((acc, edge) => {
+        const previous = edge.previous
+          ? {
+            slug: edge.previous.fields.slug,
+            title: edge.previous.frontmatter.title,
+          }
+          : null;
+        const next = edge.next
+          ? {
+            slug: edge.next.fields.slug,
+            title: edge.next.frontmatter.title,
+          }
+          : null;
+
+        return {
+          previous,
+          next,
+        };
+      }, {});
+
     return (
       <Layout>
         <FontAwesomeScript />
@@ -40,6 +63,25 @@ export default function Template({ data }) {
           <PostSponsor
             sponsor={frontmatter.sponsor}
           />
+        </div>
+
+        <div className="columns is-variable is-8">
+          <div className="column">
+            {pagination.previous
+              && (
+                <Link to={pagination.previous.slug}>
+                  ← {pagination.previous.title}
+                </Link>
+              )}
+          </div>
+          <div className="column has-text-right">
+            {pagination.next
+              && (
+                <Link to={pagination.next.slug}>
+                  {pagination.next.title} →
+                </Link>
+              )}
+          </div>
         </div>
       </Layout>
     );
@@ -94,6 +136,34 @@ export const pageQuery = graphql`
         }
         after {
           key
+        }
+      }
+    }
+    allMarkdownRemark(filter: {fields: {slug: {glob: "/post/meetup/20**/**"}}}) {
+      edges {
+        node {
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+          }
+        }
+        next {
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+          }
+        }
+        previous {
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+          }
         }
       }
     }
