@@ -4,7 +4,8 @@ module.exports = {
     description: 'WIP: AustinJS homepage built with (-surprise-) JavaScript.',
     author: '@austinjs',
   },
-  pathPrefix: '/ajs',
+  // eslint-disable-next-line quotes
+  pathPrefix: `/ajs`,
   plugins: [
     {
       resolve: 'gatsby-plugin-manifest',
