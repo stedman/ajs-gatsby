@@ -3,7 +3,7 @@ import Data from '../content/data.yaml';
 
 const MeetupDetails = ({ frontmatter, fields }) => {
   // TODO: what if there is no venue.id?
-  const biz = Data.org[`${frontmatter.venue.id}`];
+  const biz = Data.org[`${frontmatter.venue.key}`];
 
   return (
     <div className="message">

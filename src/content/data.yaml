@@ -8,31 +8,61 @@ org:
   frog:
     name: Frog Design
     url: https://www.frogdesign.com/studio/austin
+    careerUrl: https://www.frogdesign.com/careers
     location: 101 West 6th Street, Austin, TX 78701, 2nd Floor
     note:
   gingerman:
     name: The Gingerman Austin
     url: http://thegingerman.com/austin/
+    careerUrl:
     location: 301 Lavaca Street, Austin, TX 78701
     note:
+  heb:
+    name: H-E-B Digital
+    url: https://digital.heb.com/
+    careerUrl: https://digital.heb.com/join-us/
+    location: 2416 East Sixth Street, Austin, TX 78702
+    note:
   indeed:
-    name: Indeed Downtown
+    name: Indeed
     url: https://www.indeed.com
+    careerUrl: https://www.indeed.jobs/
     location: 201 West 5th St, Austin, TX 78701, 18th Floor
     note:
+  khoros:
+    name: Khoros
+    url: https://khoros.com/
+    careerUrl: https://khoros.com/about/careers
+    location: 200 West Cesar Chavez Street, Austin, TX 78701, 3rd Floor
+    note: in the Silicon Labs building on Colorado Street
   lavaca:
     name: Lavaca Street Bar
     url: https://lavacastreet.com/
+    careerUrl:
     location: 405 Lavaca Street, Austin, TX 78701
+    note:
+  magento:
+    name: Magento
+    url: https://www.magento.com/
+    careerUrl: https://adobe.wd5.myworkdayjobs.com/external_experienced
+    location:
+    note:
+  paypal:
+    name: PayPal
+    url: https://www.paypal.com/
+    careerUrl: https://www.paypal.com/us/webapps/mpp/jobs
+    location: 7700 W. Parmer Lane, Austin, TX 78729
     note:
   spredfast:
     name: Spredfast
     url:
+    careerUrl:
     location: 200 West Cesar Chavez Street, Austin, TX 78701, 3rd Floor
     note: in the Silicon Labs building on Colorado Street
   techspace:
     name: TechSpace Austin
     url: https://www.techspace.com/coworking-space-austin/central-business-district/
+    careerUrl:
     location: 98 San Jacinto Boulevard, Austin, TX 78701
     note:
 

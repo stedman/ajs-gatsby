@@ -10,12 +10,12 @@ speaker:
   github: patanser
   linkedin: patanser
 sponsor:
-  id: cloudflare
+  key: cloudflare
   hiring: true
 venue:
-  id: cloudflare
+  key: cloudflare
 after:
-  id: lavaca
+  key: lavaca
 ---
 
 Duis sunt anim eiusmod eu nulla ut non. Minim labore irure do id est minim consectetur non cillum minim ea aute qui aliquip. Commodo deserunt Lorem ullamco sunt in. Quis voluptate dolore voluptate deserunt voluptate ipsum aliquip occaecat deserunt non do reprehenderit sunt. Amet cupidatat aliqua excepteur do sunt do cillum elit eiusmod tempor irure dolore laboris.

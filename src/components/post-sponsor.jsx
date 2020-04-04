@@ -4,7 +4,7 @@ import Data from '../content/data.yaml';
 
 const PostSponsor = ({ sponsor }) => {
   // TODO: what if there is no sponsor.id? Defaults?
-  const biz = Data.org[`${sponsor.id}`];
+  const biz = Data.org[`${sponsor.key}`];
 
   return (
     <div className="tile">
