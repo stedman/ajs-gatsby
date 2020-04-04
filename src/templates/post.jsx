@@ -2,7 +2,6 @@ import React from 'react';
 import { graphql, Link } from 'gatsby';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
-import FontAwesomeScript from '../components/fontawesome-script';
 import BizCard from '../components/biz-card';
 import MeetupDetails from '../components/meetup-details';
 import PostSponsor from '../components/post-sponsor';
@@ -43,7 +42,6 @@ export default function Template({ data }) {
 
     return (
       <Layout>
-        <FontAwesomeScript />
         <SEO
           title={`Meetup: ${frontmatter.title} (${fields.dateShort})`}
         />

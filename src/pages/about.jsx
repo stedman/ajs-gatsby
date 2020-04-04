@@ -1,12 +1,10 @@
 import React from 'react';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
-import FontAwesomeScript from '../components/fontawesome-script';
 import People from '../components/people';
 
 const About = () => (
   <Layout>
-    <FontAwesomeScript />
     <SEO title="About" />
     <div className="columns is-variable is-8-desktop">
       <div className="column is-two-thirds">
@@ -42,6 +40,10 @@ const About = () => (
 
       <div className="column">
         <div className="has-offset-top-3">
+          <div className="content">
+            <h2>People</h2>
+            <p>Austin JavaScript is made possible by the hard work and goodwill of many people, but there are a few in particular that you should feel free to reach out to if you’ve got any questions:</p>
+          </div>
           <People />
         </div>
       </div>
