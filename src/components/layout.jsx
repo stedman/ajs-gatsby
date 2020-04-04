@@ -33,7 +33,7 @@ const Layout = ({ children }) => {
           </div>
         </div>
       </main>
-      <footer className="footer">
+      <footer className="footer has-background-white has-border-top-medium has-offset-top">
         <div className="container">
           <div className="navbar">
             <div className="navbar-menu">

@@ -21,6 +21,16 @@ $info: $tetradic1;
   color: $tetradic3 !important;
 }
 
+.has-border-top {
+  border-top: 1px solid $white-ter;
+}
+.has-border-top-medium {
+  border-top: 5px solid $white-ter;
+}
+.has-border-top-large {
+  border-top: 10px solid $white-ter;
+}
+
 @media screen and (min-width: $tablet) {
   .has-offset-top {
     margin-top: 1em;

@@ -68,7 +68,7 @@ export default function Template({ data }) {
           />
         </div>
 
-        <div className="columns is-variable is-8">
+        <div className="columns is-variable is-8 has-offset-top">
           <div className="column">
             {pagination.previous
               && (
