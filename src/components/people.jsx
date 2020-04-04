@@ -1,6 +1,6 @@
 import React from 'react';
 import BizCard from './biz-card';
-import Data from '../content/data.yaml';
+import PeopleData from '../content/people.yaml';
 
 const GroupTitle = ({ groupName, idx }) => {
   if (idx === 0) {
@@ -16,7 +16,7 @@ const People = () => (
       <p>Austin JavaScript is made possible by the hard work and goodwill of many people, but there are a few in particular that you should feel free to reach out to if you’ve got any questions:</p>
     </div>
 
-    {Object.entries(Data.people).map(([org, group]) => group.map((person, idx) => (
+    {Object.entries(PeopleData).map(([org, group]) => group.map((person, idx) => (
       <>
         <GroupTitle groupName={org} idx={idx} />
         <BizCard
