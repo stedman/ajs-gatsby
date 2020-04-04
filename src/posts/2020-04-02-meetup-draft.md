@@ -1,14 +1,14 @@
 ---
 title: Pandemic Programming
-speaker:
-  name: Pat Anser
-  title: Software Engineer at Austin JavaScript
-  picUrl:
-  bio:
-  url: http://patanser.com
-  twitter: patanser
-  github: patanser
-  linkedin: patanser
+speakers:
+  - name: Pat Anser
+    title: Software Engineer at Austin JavaScript
+    picUrl:
+    bio:
+    url: http://patanser.com
+    twitter: patanser
+    github: patanser
+    linkedin: patanser
 sponsor:
   key: cloudflare
   hiring: true

@@ -13,6 +13,12 @@ export default function Template({ data }) {
   const { edges } = allMarkdownRemark;
 
   if (fields.postTypes[0] === 'meetup') {
+    const Speakers = frontmatter.speakers.map((speaker) => (
+      <div className="has-offset-top">
+        <BizCard person={speaker} />
+      </div>
+    ));
+
     const pagination = edges
       .filter((edge) => edge.node.fields.slug === fields.slug)
       .reduce((acc, edge) => {
@@ -53,10 +59,9 @@ export default function Template({ data }) {
               fields={fields}
             />
           </div>
-          <div className="column has-offset-top-3">
-            <BizCard
-              person={frontmatter.speaker}
-            />
+          <div className="column has-offset-top">
+            <h2 className="title is-sr-only">Speaker</h2>
+            {Speakers}
           </div>
         </div>
         <div className="section">
@@ -117,7 +122,7 @@ export const pageQuery = graphql`
       }
       frontmatter {
         title
-        speaker {
+        speakers {
           name
           title
           bio

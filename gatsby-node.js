@@ -15,7 +15,7 @@ exports.createSchemaCustomization = ({ actions }) => {
       frontmatter: Frontmatter
     }
     type Frontmatter {
-      speaker: Speaker
+      speakers: [Speaker]
       sponsor: Sponsor
       venue: Venue
       after: After
