@@ -3,7 +3,8 @@ import OrgData from '../content/organizations.yaml';
 
 const MeetupDetails = ({ frontmatter, fields }) => {
   // TODO: what if there is no venue.id?
-  const biz = OrgData[`${frontmatter.venue.key}`];
+  const venue = OrgData[`${frontmatter.venue.key}`];
+  const after = OrgData[`${frontmatter.after.key}`];
 
   return (
     <div className="message">
@@ -19,12 +20,19 @@ const MeetupDetails = ({ frontmatter, fields }) => {
         </div>
         <div>
           LOCATION <span className="icon has-text-grey-dark"><i className="fas fa-map-marker-alt" /></span>
-          <strong className="has-text-primary">{biz.name}</strong>
+          <strong className="has-text-primary">{venue.name}</strong>
           {' '}
-          {biz.location
+          {venue.location
             && (
-              <em>({ biz.location})</em>
+              <em>({ venue.location})</em>
             )}
+          <div className="has-offset-top">
+            Afterwards, the discussion carries on at <strong>
+              {after.url
+                ? <a href={after.url} target="_blank" rel="nofollow noopener noreferrer">{after.name}</a>
+                : after.name}
+            </strong> ({after.location}).
+          </div>
         </div>
       </div>
     </div>
