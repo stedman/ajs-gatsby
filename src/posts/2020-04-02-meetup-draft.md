@@ -9,6 +9,7 @@ speakers:
     twitter: patanser
     github: patanser
     linkedin: patanser
+    email: pat.anser@aol.com
 sponsor:
   key: cloudflare
   hiring: true

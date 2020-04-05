@@ -15,8 +15,8 @@ const CodeOfConduct = () => (
           <h3>Need Help?</h3>
           <p>Contact an organizer in person or via e-mail:</p>
           <ul>
-            <li>Rebecca Murphey: <a href="mailto:rmurphey@gmail.com">rmurphey@gmail.com</a></li>
-            <li>Lon Ingram: <a href="mailto:lawnsea@gmail.com">lawnsea@gmail.com</a></li>
+            <li>Kevin Kipp: <a href="mailto:kevin.kipp@gmail.com">kevin.kipp@gmail.com</a></li>
+            <li>Patrick Costanzo: <a href="mailto:costanzo.patrick@gmail.com">costanzo.patrick@gmail.com</a></li>
           </ul>
 
           <h2>The Quick Version</h2>

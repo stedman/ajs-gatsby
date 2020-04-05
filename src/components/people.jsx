@@ -9,7 +9,7 @@ const GroupTitle = ({ groupName, idx }) => {
   return null;
 };
 
-const People = ({ include }) => (
+const People = ({ include, hasTitles }) => (
   Object.entries(PeopleData)
     .filter(([org, group]) => {
       if (include) {
@@ -19,10 +19,15 @@ const People = ({ include }) => (
     })
     .map(([org, group]) => group.map((person, idx) => (
       <>
-        <GroupTitle groupName={org} idx={idx} />
-        <BizCard
-          person={person}
-        />
+        {hasTitles
+          && (
+            <GroupTitle groupName={org} idx={idx} />
+          )}
+        <div className="brick">
+          <BizCard
+            person={person}
+          />
+        </div>
       </>
     )))
 );

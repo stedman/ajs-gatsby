@@ -25,10 +25,11 @@ exports.createSchemaCustomization = ({ actions }) => {
       title: String
       bio: String
       picUrl: String
+      email: String
       url: String
-      linkedin: String
       twitter: String
       github: String
+      linkedin: String
     }
     type Sponsor {
       key: String

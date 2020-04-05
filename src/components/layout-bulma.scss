@@ -49,3 +49,19 @@ $info: $tetradic1;
 .is-marginless-bottom {
   margin-bottom: 0 !important;
 }
+
+.bricks-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin: -0.15em;
+
+  .brick {
+    flex: 1 1 18em;
+    margin: 0.15em;
+    max-width: 25em;
+  }
+}
+.brick {
+  margin-bottom: 1em;
+}

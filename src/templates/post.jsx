@@ -126,9 +126,9 @@ export const pageQuery = graphql`
           bio
           picUrl
           url
-          linkedin
           twitter
           github
+          linkedin
         }
         sponsor {
           key

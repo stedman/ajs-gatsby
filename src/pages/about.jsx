@@ -9,7 +9,7 @@ const About = () => (
     <div className="columns is-variable is-8-desktop">
       <div className="column is-two-thirds">
         <div className="content">
-          <h1>What is this?</h1>
+          <h1>About</h1>
           <p>Austin JavaScript is a community that meets to discuss JavaScript and the open web. The group started back in 2009, and it’s been going strong ever since. We cover a range of topics, including:</p>
           <ul>
             <li>The JavaScript language</li>
@@ -25,11 +25,18 @@ const About = () => (
           </ul>
           <p>If you’d like to get more details on the topics, take a look at the <a href="/post/">post archives</a>.</p>
 
-          <h2>How does it usually work?</h2>
+          <h2>How it usually works</h2>
           <p>We typically meet on the 3<sup>rd</sup> Tuesday of each month downtown. We’ll have a speaker or two, open things up for questions and discussion, and then head to a nearby watering hole to continue the festivities.</p>
 
-          <h2>Anything else I should know?</h2>
-          <p>Yes! We’ve work hard to build a community of people that treats each other with <em>excellence</em>. We’ve formalized what this means into our <a href="/code-of-conduct/">Code of Conduct</a>.</p>
+          <h2>Excellence</h2>
+          <p>We’ve work hard to build a community of people that treats each other with <em>excellence</em>. We’ve formalized what this means into our <a href="/code-of-conduct/">Code of Conduct</a>.</p>
+
+        </div>
+        <div className="has-offset-top-3 has-border-top">
+          <h2 className="title is-size-4">Emeriti</h2>
+          <div className="bricks-flex">
+            <People include="emeriti" />
+          </div>
         </div>
       </div>
       <div className="column">
@@ -38,7 +45,7 @@ const About = () => (
             <h2>People</h2>
             <p>Austin JavaScript is made possible by the hard work and goodwill of many people, but there are a few in particular that you should feel free to reach out to if you’ve got any questions:</p>
           </div>
-          <People />
+          <People include="organizers" />
         </div>
       </div>
     </div>
