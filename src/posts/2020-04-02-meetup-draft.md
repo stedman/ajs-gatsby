@@ -2,9 +2,9 @@
 title: Pandemic Programming
 speakers:
   - name: Pat Anser
-    title: Software Engineer at Austin JavaScript
+    title: Developer Extraordinaire at Austin JavaScript
     picUrl:
-    bio:
+    bio: Pat is a really great guy/gal with a tremendous influence over the community.
     url: http://patanser.com
     twitter: patanser
     github: patanser
