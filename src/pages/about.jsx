@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'gatsby';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import People from '../components/people';
@@ -23,13 +24,13 @@ const About = () => (
             <li>Cryptography</li>
             <li>How CSS colors got their names</li>
           </ul>
-          <p>If you’d like to get more details on the topics, take a look at the <a href="/post/">post archives</a>.</p>
+          <p>If you’d like to get more details on past topics, take a look at the <Link to="/post/">archives</Link>.</p>
 
           <h2>How it usually works</h2>
           <p>We typically meet on the 3<sup>rd</sup> Tuesday of each month downtown. We’ll have a speaker or two, open things up for questions and discussion, and then head to a nearby watering hole to continue the festivities.</p>
 
           <h2>Excellence</h2>
-          <p>We’ve work hard to build a community of people that treats each other with <em>excellence</em>. We’ve formalized what this means into our <a href="/code-of-conduct/">Code of Conduct</a>.</p>
+          <p>We’ve work hard to build a community of people that treats each other with <em>excellence</em>. We’ve formalized what this means into our <Link to="/code-of-conduct/">Code of Conduct</Link>.</p>
 
         </div>
         <div className="has-offset-top-3 has-border-top">
