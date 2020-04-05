@@ -55,7 +55,7 @@ const Contributing = () => (
               <div className="content">
                 <p>Join the peeps keeping this ship afloat! Here are a few things we usually need help on:</p>
                 <ul>
-                  <li>Maintaining the website</li>
+                  <li>Maintaining the <a href="https://github.com/austinjavascript/austinjavascript.github.io" target="_blank" rel="nofollow noopener noreferrer">website</a></li>
                   <li>Recruiting speakers</li>
                   <li>Welcoming folks at the venue entrance</li>
                 </ul>
