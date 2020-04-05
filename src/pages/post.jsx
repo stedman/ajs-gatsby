@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import React from 'react';
 import PostLink from '../components/post-link';
 import Layout from '../components/layout';
@@ -10,7 +9,7 @@ const IndexPage = ({
   },
 }) => {
   const Posts = edges
-    // Make sure there's a date field and that file isn't 'draft'.
+    // Make sure there's a date field and that the filename doesn't include 'draft'.
     .filter((edge) => !!edge.node.fields.date && edge.node.fields.postTypes[1] !== 'draft')
     .map((edge) => <PostLink key={edge.node.id} post={edge.node} />);
 
