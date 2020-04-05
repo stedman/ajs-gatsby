@@ -8,13 +8,17 @@ const Contributing = () => (
     <SEO title="Contributing" />
     <div className="columns is-variable is-8-desktop">
       <div className="column is-two-thirds">
-        <h1 className="title">Contributing</h1>
+        <div className="content">
+          <h1>Contributing</h1>
+          <p>There are plenty of ways to get involved in your Austin JavaScript community.</p>
+        </div>
+
         <div className="tile is-ancestor">
           <div className="tile is-parent">
             <div className="tile is-child box">
-              <h2 className="title is-size-4 has-text-primary">Speaker</h2>
+              <h2 className="title is-size-4 has-text-primary">Presenter</h2>
               <div className="content">
-                <p>Drop some knowledge on your peeps! Our presentations typically run 45-60 minutes, with a Q and A session at the end.</p>
+                <p>Drop some knowledge on your peeps or brush up on your speaking skills. Presentations typically run 30-50 minutes, with a Q and A session at the end.</p>
                 <p>Can you do that? Sure you can! Let us know if you need help.</p>
               </div>
             </div>
@@ -34,7 +38,7 @@ const Contributing = () => (
             <div className="tile is-child box">
               <h2 className="title is-size-4 has-text-tetradic1">Host</h2>
               <div className="content">
-                <p>Open your venue to the next event! Here's what makes a great event space:</p>
+                <p>Show off your amazing workspace at the next event! Here's what makes a great event space:</p>
                 <ul>
                   <li>Downtown Austin location</li>
                   <li>Video projection capabilities</li>
@@ -47,16 +51,26 @@ const Contributing = () => (
           </div>
           <div className="tile is-parent">
             <div className="tile is-child box">
-              <h2 className="title is-size-4 has-text-tetradic3">Organizer</h2>
+              <h2 className="title is-size-4 has-text-tetradic3">Crew</h2>
               <div className="content">
-                <p>Join the peeps keeping this ship afloat! Contact one of the Organizers for more details.</p>
+                <p>Join the peeps keeping this ship afloat! Here are a few things we usually need help on:</p>
+                <ul>
+                  <li>Maintaining the website</li>
+                  <li>Recruiting speakers</li>
+                  <li>Welcoming folks at the venue entrance</li>
+                </ul>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="column">
+      <div className="column has-offset-top-3">
+        <div className="content">
+          <h2 className="is-sr-only">Organizers</h2>
+          <p>If you are interested in contributing, please contact one of our friendly Organizers:</p>
+        </div>
+
         <People include="organizers" />
       </div>
     </div>

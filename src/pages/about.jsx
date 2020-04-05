@@ -34,7 +34,10 @@ const About = () => (
 
         </div>
         <div className="has-offset-top-3 has-border-top">
-          <h2 className="title is-size-4">Emeriti</h2>
+          <div className="content">
+            <h2>Emeriti</h2>
+            <p>If you come across the following people, kindly open the door for them, help them to their seat, and thank them for their many years of service. They helped make Austin JavaScript what it is today.</p>
+          </div>
           <div className="bricks-flex">
             <People include="emeriti" />
           </div>
@@ -43,7 +46,7 @@ const About = () => (
       <div className="column">
         <div className="has-offset-top-3">
           <div className="content">
-            <h2>People</h2>
+            <h2>The Organizers</h2>
             <p>Austin JavaScript is made possible by the hard work and goodwill of many people, but there are a few in particular that you should feel free to reach out to if you’ve got any questions:</p>
           </div>
           <People include="organizers" />
