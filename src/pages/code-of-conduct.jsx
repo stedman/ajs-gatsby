@@ -8,21 +8,21 @@ const CodeOfConduct = () => (
     <div className="columns is-variable is-8-desktop">
       <div className="column is-two-thirds">
         <div className="content">
-          <h1>Code of Conduct</h1>
+          <h1>Code of conduct</h1>
           <p>All attendees, speakers, sponsors and volunteers at our meetup are required to agree with the following code of conduct. Organizers will enforce this code throughout the event. We expect cooperation from all participants to help ensure a safe, constructive environment for everybody.</p>
           <p><em>TL;DR: Be excellent with each other.</em></p>
 
-          <h3>Need Help?</h3>
+          <h3>Need help?</h3>
           <p>Contact an organizer in person or via e-mail:</p>
           <ul>
             <li>Kevin Kipp: <a href="mailto:kevin.kipp@gmail.com">kevin.kipp@gmail.com</a></li>
             <li>Patrick Costanzo: <a href="mailto:costanzo.patrick@gmail.com">costanzo.patrick@gmail.com</a></li>
           </ul>
 
-          <h2>The Quick Version</h2>
+          <h2>The quick version</h2>
           <p>Our meetup is dedicated to providing a harassment-free meetup experience for everyone, regardless of gender, sexual orientation, disability, physical appearance, body size, race, or religion. We do not tolerate harassment of meetup participants in any form. Sexual language and imagery is not appropriate for any meetup venue, including talks, workshops, parties, Twitter and other online media. Meetup participants violating these rules may be sanctioned or expelled from the meetup <em>without a refund</em> at the discretion of the meetup organizers.</p>
 
-          <h2>The Less Quick Version</h2>
+          <h2>The less quick version</h2>
           <p>Harassment includes offensive verbal comments related to gender, sexual orientation, disability, physical appearance, body size, race, religion, sexual images in public spaces, deliberate intimidation, stalking, following, harassing photography or recording, sustained disruption of talks or other events, inappropriate physical contact, and unwelcome sexual attention.</p>
           <p>Participants asked to stop any harassing behavior are expected to comply immediately.</p>
           <p>Sponsors are also subject to the anti-harassment policy. In particular, sponsors should not use sexualized images, activities, or other material.</p>

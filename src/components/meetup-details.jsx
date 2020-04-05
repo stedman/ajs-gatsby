@@ -32,18 +32,20 @@ const MeetupDetails = ({ frontmatter, fields }) => {
                   && (
                     <em>({ venue.location})</em>
                   )}
-
-                {after
-                  && (
-                    <div className="has-offset-top">
-                      Afterwards, the discussion carries on at <strong>
-                        {after.url
-                          ? <a href={after.url} target="_blank" rel="nofollow noopener noreferrer">{after.name}</a>
-                          : after.name}
-                      </strong> ({after.location}).
-                    </div>
-                  )}
               </div>
+              <div style={{ marginTop: '0.5em' }}>
+                Check back here or <a href="https://twitter.com/AustinJS" target="_blank" rel="nofollow noopener noreferrer">@AustinJS on Twitter</a> for updates.
+              </div>
+              {after
+                && (
+                  <div className="has-offset-top">
+                    Afterwards, the discussion carries on at <strong>
+                      {after.url
+                        ? <a href={after.url} target="_blank" rel="nofollow noopener noreferrer">{after.name}</a>
+                        : after.name}
+                    </strong> ({after.location}).
+                  </div>
+                )}
             </div>
           </div>
         )}

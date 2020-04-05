@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: 'Austin JavaScript',
     description: 'WIP: AustinJS homepage built with (-surprise-) JavaScript.',
-    author: '@austinjs',
+    author: '@AustinJS',
   },
   pathPrefix: '/ajs',
   plugins: [
